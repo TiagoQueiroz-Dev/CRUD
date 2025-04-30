@@ -1,0 +1,29 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md p-10 bg-white rounded-lg shadow-md">
+
+    <h2 class="mb-6 text-2xl font-semibold text-center">Formulário</h2>
+
+    <form [formGroup]="formulario" class="space-y-5">
+
+      <div *ngFor="let field of campo">
+        <label [for]="field.nome" class="block mb-1 text-gray-700">{{ field.label }}</label>
+
+        <input *ngIf="field.tipo === 'text'" [id]="field.nome" [formControlName]="field.nome" pInputText
+          class="w-full h-8"
+        />
+
+        <p-datepicker *ngIf="field.tipo === 'date'" [id]="field.nome" [formControlName]="field.nome"
+          class="w-full h-8"
+        />
+
+        <p-select *ngIf="field.tipo === 'select'" [options]="field.options" optionLabel="nome"
+          [formControlName]="field.nome" class="w-full h-8"
+        />
+      </div>
+
+      <div>
+        <p-button pButton type="submit" label="Enviar" class="w-full" (onClick)="enviar()"></p-button>
+      </div>
+    </form>
+  </div>
+</div>

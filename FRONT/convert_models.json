@@ -1,0 +1,28 @@
+{
+  "include": [
+      "C:/estudos/projeto/bACK/core/domain/Entities/*.cs",
+      "C:/estudos/projeto/bACK/core/aplication/viewModels/**/*.cs"
+  ],
+  "exclude": [
+    "C:/estudos/projeto/bACK/core/aplication/viewModels/**/ProfileExtencion.cs"
+  ],
+  "output": "./src/api.ts",
+  "includeComments": true,
+  "camelCase": false,
+  "camelCaseEnums": false,
+  "camelCaseOptions": {
+      "pascalCase": false,
+      "preserveConsecutiveUppercase": false,
+      "locale": "en-US"
+  },
+  "numericEnums": false,
+  "validateEmitDefaultValue": false,
+  "omitFilePathComment": false,
+  "omitSemicolon": false,
+  "stringLiteralTypesInsteadOfEnums": false,
+  "customTypeTranslations": {
+      "ProductName": "string",
+      "ProductNumber": "string",
+      "DateTime": "Date"
+  }
+}
