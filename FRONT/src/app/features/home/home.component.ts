@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
@@ -10,6 +10,8 @@ import { SelectModule } from 'primeng/select';
 import { DatePickerModule } from 'primeng/datepicker';
 import { PessoaService } from './home.service';
 import { AdicionarPessoaViewModel } from '../../../api';
+import { FormularioComponent } from "../../shared/components/formulario/formulario.component";
+import { campoFormulario } from '../../shared/data/campo_formulario';
 
 @Component({
   selector: 'app-home',
@@ -23,59 +25,28 @@ import { AdicionarPessoaViewModel } from '../../../api';
     InputNumberModule,
     InputTextModule,
     SelectModule,
-    DatePickerModule
-  ],
+    DatePickerModule,
+    FormularioComponent
+],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
 
-  constructor(private _pessoaService: PessoaService){}
+  constructor(
+    private _pessoaService: PessoaService
+    , private fb: FormBuilder
+  ){}
 
-  formulario!: FormGroup;
-  Resultado!: AdicionarPessoaViewModel;
+  formulario: FormGroup;
+  Resultado: AdicionarPessoaViewModel;
+  campos: campoFormulario[];
 
-  campo = [
-    {
-      nome: 'cpf',
-      tipo: 'text',
-      label: 'CPF',
-      mascara: '999.999.999-99',
-      maxLength: 14,
-      validators: [Validators.required]
-    },
-    {
-      nome: 'nome',
-      tipo: 'text',
-      label: 'Nome completo',
-      placeholder: 'Digite seu nome',
-      maxLength: 50,
-      validators: [Validators.required]
-    },
-    {
-      nome: 'idade',
-      tipo: 'date',
-      label: 'Data Nascimento',
-      validators: [Validators.required]
-    },
-    {
-      nome: 'sexo',
-      tipo: 'select',
-      label: 'Sexo',
-      options: [
-        { nome: 'Masculino', value: true },
-        { nome: 'Feminino', value: false }
-      ],
-      validators: [Validators.required]
-    }
-  ];
+
 
 
   ngOnInit() {
-    const group: any = {};
-    this.campo.forEach(campos => {
-      group[campos.nome] = new FormControl('', campos.validators);
-    });
-    this.formulario = new FormGroup(group);
+    this.configurarCampos();
+    this.formulario = this.fb.group({});
   }
 
   mapearFormulario(){
@@ -87,9 +58,46 @@ export class HomeComponent {
     }
   }
 
+  configurarCampos(){
+    this.campos = [
+      {
+        nome: 'cpf',
+        tipo: 'text',
+        label: 'CPF',
+        mascara: '999.999.999-99',
+        required: true,
+        maxLength: 14,
+        validators: [Validators.required]
+      },
+      {
+        nome: 'nome',
+        tipo: 'text',
+        label: 'Nome completo',
+        required: true,
+        maxLength: 50,
+        validators: [Validators.required]
+      },
+      {
+        nome: 'idade',
+        tipo: 'date',
+        label: 'Data Nascimento',
+        validators: [Validators.required]
+      },
+      {
+        nome: 'sexo',
+        tipo: 'select',
+        label: 'Sexo',
+        options: [
+          { nome: 'Masculino', value: true },
+          { nome: 'Feminino', value: false }
+        ],
+        validators: [Validators.required]
+      }
+    ];
+  }
+
   enviar() {
     this.mapearFormulario();
-    console.log(this.Resultado);
     this._pessoaService.AdicionarPessoa(this.Resultado);
   }
 

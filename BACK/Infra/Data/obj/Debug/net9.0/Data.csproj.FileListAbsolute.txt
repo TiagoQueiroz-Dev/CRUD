@@ -36,3 +36,4 @@ C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\refint\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.pdb
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\ref\Data.dll
+C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.sourcelink.json

@@ -28,3 +28,4 @@ C:\Estudos\Projeto\BACK\Core\Aplication\obj\Debug\net9.0\Aplication.dll
 C:\Estudos\Projeto\BACK\Core\Aplication\obj\Debug\net9.0\refint\Aplication.dll
 C:\Estudos\Projeto\BACK\Core\Aplication\obj\Debug\net9.0\Aplication.pdb
 C:\Estudos\Projeto\BACK\Core\Aplication\obj\Debug\net9.0\ref\Aplication.dll
+C:\Estudos\Projeto\BACK\Core\Aplication\obj\Debug\net9.0\Aplication.sourcelink.json

@@ -213,3 +213,4 @@ C:\Estudos\Projeto\BACK\WebAPI\API\obj\Debug\net9.0\API.pdb
 C:\Estudos\Projeto\BACK\WebAPI\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Estudos\Projeto\BACK\WebAPI\API\obj\Debug\net9.0\ref\API.dll
 C:\Estudos\Projeto\BACK\WebAPI\API\bin\Debug\net9.0\AutoMapper.dll
+C:\Estudos\Projeto\BACK\WebAPI\API\obj\Debug\net9.0\API.sourcelink.json

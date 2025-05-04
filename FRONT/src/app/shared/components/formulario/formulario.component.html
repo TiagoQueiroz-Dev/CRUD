@@ -1,0 +1,48 @@
+<div [formGroup]="form">
+  <label [for]="configuracao.nome">{{ configuracao.label }}</label>
+
+  <div>
+    <ng-container *ngIf="!configuracao.mascara" [ngSwitch]="configuracao.tipo">
+      <div>
+        <input *ngSwitchCase="'text'" [id]="configuracao.nome" pInputText [formControlName]="configuracao.nome"
+          class="w-full h-8" [attr.maxLength]="configuracao.maxLength" [placeholder]="configuracao.placeholder || ''" />
+      </div>
+      <div>
+        <input *ngSwitchCase="'password'" [id]="configuracao.nome" pPassword [formControlName]="configuracao.nome"
+          class="w-full h-8" [placeholder]="configuracao.placeholder || ''" />
+      </div>
+      <div>
+        <p-datepicker *ngSwitchCase="'date'" [id]="configuracao.nome" inputStyleClass="w-full h-8" [formControlName]="configuracao.nome"
+          [placeholder]="configuracao.placeholder || ''"></p-datepicker>
+      </div>
+      <div>
+        <p-select *ngSwitchCase="'select'" [id]="configuracao.nome" [options]="configuracao.options" [formControlName]="configuracao.nome"
+          optionLabel="nome" class="w-full h-8" dateFormat="dd.mm.yy" [placeholder]="configuracao.placeholder || ''"></p-select>
+      </div>
+      <div>
+        <p-checkbox *ngSwitchCase="'checkbox'" [id]="configuracao.nome" [formControlName]="configuracao.nome"
+           class="w-full h-8"></p-checkbox>
+      </div>
+      <div>
+        <p-radioButton *ngSwitchCase="'radio'" [id]="configuracao.nome" [formControlName]="configuracao.nome"
+         [name]="configuracao.nome" class="w-full h-8"></p-radioButton>
+      </div>
+      <div>
+        <textarea *ngSwitchCase="'textarea'" [id]="configuracao.nome" pInputTextarea [formControlName]="configuracao.nome"
+          class="w-full h-24"
+          [placeholder]="configuracao.placeholder || ''"></textarea>
+      </div>
+    </ng-container>
+  </div>
+
+  <div>
+    <p-inputmask *ngIf="configuracao.mascara" [mask]="configuracao.mascara" [formControlName]="configuracao.nome" class="w-full h-24"/>
+  </div>
+
+
+  <div *ngIf="configuracao.required && form.get(configuracao.nome)?.hasError('required') && form.get(configuracao.nome)?.touched" class="text-red-500">
+    Campo obrigatório
+  </div>
+</div>
+
+

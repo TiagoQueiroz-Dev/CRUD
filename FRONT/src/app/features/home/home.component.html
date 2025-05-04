@@ -5,20 +5,12 @@
 
     <form [formGroup]="formulario" class="space-y-5">
 
-      <div *ngFor="let field of campo">
-        <label [for]="field.nome" class="block mb-1 text-gray-700">{{ field.label }}</label>
-
-        <input *ngIf="field.tipo === 'text'" [id]="field.nome" [formControlName]="field.nome" pInputText
-          class="w-full h-8"
-        />
-
-        <p-datepicker *ngIf="field.tipo === 'date'" [id]="field.nome" [formControlName]="field.nome"
-          class="w-full h-8"
-        />
-
-        <p-select *ngIf="field.tipo === 'select'" [options]="field.options" optionLabel="nome"
-          [formControlName]="field.nome" class="w-full h-8"
-        />
+      <div>
+        <app-formulario
+        *ngFor="let item of campos"
+        [configuracao]="item"
+        [form]="formulario">
+        ></app-formulario>
       </div>
 
       <div>
