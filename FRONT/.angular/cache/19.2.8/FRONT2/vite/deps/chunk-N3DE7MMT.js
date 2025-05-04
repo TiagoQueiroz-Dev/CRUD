@@ -393,6 +393,9 @@ function getTargetElement(target, currentElement) {
       return (element == null ? void 0 : element.nodeType) === 9 || isExist(element) ? element : void 0;
   }
 }
+function getUserAgent() {
+  return navigator.userAgent;
+}
 function getWidth(element) {
   if (element) {
     let width = element.offsetWidth;
@@ -401,6 +404,9 @@ function getWidth(element) {
     return width;
   }
   return 0;
+}
+function isClient() {
+  return !!(typeof window !== "undefined" && window.document && window.document.createElement);
 }
 function isVisible(element) {
   return !!(element && element.offsetParent != null);
@@ -1652,7 +1658,9 @@ export {
   getOuterHeight,
   getSelection,
   getTargetElement,
+  getUserAgent,
   getWidth,
+  isClient,
   isVisible,
   isTouchDevice,
   remove,
@@ -1696,4 +1704,4 @@ export {
   TranslationKeys,
   TreeDragDropService
 };
-//# sourceMappingURL=chunk-GKMR7QW4.js.map
+//# sourceMappingURL=chunk-N3DE7MMT.js.map
