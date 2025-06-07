@@ -1,0 +1,10 @@
+# Padrão de projetos Node/Angular
+/node_modules
+/dist
+
+# Ignorar todos os arquivos TypeScript (conforme seu pedido)
+appsettings.json
+# Arquivos de IDE e sistema
+.vscode/
+/obj/
+/Debug/
