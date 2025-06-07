@@ -5,7 +5,7 @@ import { environment } from "../../../environments/environment";
 import { AdicionarPessoaViewModel } from "../../../api";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class PessoaService{
 
