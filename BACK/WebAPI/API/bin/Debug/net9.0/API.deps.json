@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "API/1.0.0": {
         "dependencies": {
-          "Aplication": "1.0.0",
+          "Application": "1.0.0",
           "AutoMapper": "14.0.0",
           "Data": "1.0.0",
           "Domain": "1.0.0",
@@ -652,13 +652,13 @@
           }
         }
       },
-      "Aplication/1.0.0": {
+      "Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Domain": "1.0.0"
         },
         "runtime": {
-          "Aplication.dll": {
+          "Application.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -666,7 +666,7 @@
       },
       "Data/1.0.0": {
         "dependencies": {
-          "Aplication": "1.0.0",
+          "Application": "1.0.0",
           "AutoMapper": "14.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2",
@@ -1186,7 +1186,7 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "Aplication/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

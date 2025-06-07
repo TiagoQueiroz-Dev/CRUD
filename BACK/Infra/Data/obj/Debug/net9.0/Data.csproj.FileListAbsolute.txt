@@ -20,12 +20,10 @@ C:\Estudos\Projeto\Infra\Data\obj\Debug\net9.0\ref\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Data.deps.json
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Data.pdb
-C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Aplication.dll
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Domain.dll
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Services.dll
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Services.pdb
 C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Domain.pdb
-C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Aplication.pdb
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.csproj.AssemblyReference.cache
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.AssemblyInfoInputs.cache
@@ -37,3 +35,5 @@ C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\refint\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.pdb
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\ref\Data.dll
 C:\Estudos\Projeto\BACK\Infra\Data\obj\Debug\net9.0\Data.sourcelink.json
+C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Application.dll
+C:\Estudos\Projeto\BACK\Infra\Data\bin\Debug\net9.0\Application.pdb

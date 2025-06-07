@@ -1178,7 +1178,7 @@
           }
         }
       },
-      "Aplication/1.0.0": {
+      "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -1186,17 +1186,17 @@
           "Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Aplication.dll": {}
+          "bin/placeholder/Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Aplication.dll": {}
+          "bin/placeholder/Application.dll": {}
         }
       },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Aplication": "1.0.0",
+          "Application": "1.0.0",
           "AutoMapper": "14.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
@@ -3445,10 +3445,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Aplication/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
-      "path": "../../Core/Aplication/Aplication.csproj",
-      "msbuildProject": "../../Core/Aplication/Aplication.csproj"
+      "path": "../../Core/Application/Application.csproj",
+      "msbuildProject": "../../Core/Application/Application.csproj"
     },
     "Data/1.0.0": {
       "type": "project",
@@ -3468,7 +3468,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Aplication >= 1.0.0",
+      "Application >= 1.0.0",
       "AutoMapper >= 14.0.0",
       "Data >= 1.0.0",
       "Domain >= 1.0.0",
@@ -3503,8 +3503,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj": {
-              "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj"
+            "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj": {
+              "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj"
             },
             "C:\\Estudos\\Projeto\\BACK\\Core\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Domain\\Domain.csproj"
