@@ -37,7 +37,10 @@ export class homeCampos {
         ],
         validators: [Validators.required]
       }
+
     ];
+
+
 
     return campos;
   }

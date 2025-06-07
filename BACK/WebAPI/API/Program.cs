@@ -1,7 +1,8 @@
-using Aplication.Interfaces;
-using Aplication.Services;
-using Aplication.ViewModels.PessoaViewModels;
+using Application.Interfaces;
+using Application.Services;
+using Application.ViewModels.PessoaViewModels;
 using Data.DataContext;
+using Data.DataContext.PopularEnum;
 using Data.Repositories;
 using Domain.Repositories;
 using Domain.Services;
@@ -18,7 +19,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Conexao")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("srv-data")));
 
 builder.Services.AddScoped<IPessoaService, PessoaService>();
 builder.Services.AddScoped<IPessoaApplicationService, PessoaApplicationService>();
@@ -34,6 +35,13 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<Context>();
+    
+    Enums.InicializarEnums(context);
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -45,12 +53,9 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAll");
 
 app.UseRouting();
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.MapControllers();
 
 app.Run();

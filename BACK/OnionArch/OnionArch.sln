@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7C5E760E-5C7A-4122-B3C9-4BC871EC4F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplication", "..\Core\Aplication\Aplication.csproj", "{D345C23B-7E71-467F-8B00-57CFEA7033DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "..\Core\Application\Application.csproj", "{D345C23B-7E71-467F-8B00-57CFEA7033DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\Core\Domain\Domain.csproj", "{62F89EAF-6786-4F4D-89D3-63FEACE9CF9A}"
 EndProject

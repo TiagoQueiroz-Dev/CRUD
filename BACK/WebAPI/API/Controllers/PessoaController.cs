@@ -1,5 +1,5 @@
-using Aplication.Interfaces;
-using Aplication.ViewModels.PessoaViewModels;
+using Application.Interfaces;
+using Application.ViewModels.PessoaViewModels;
 using AutoMapper;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -22,9 +22,13 @@ public class PessoaController : ControllerBase
     }
     [Route("AdicionarPessoa")]
     [HttpPost]
-    public ActionResult<int> AdicionarPessoa( AdicionarPessoaViewModel pPessoa)
+    public ActionResult<int> AdicionarPessoa([FromBody] AdicionarPessoaViewModel pPessoa)
     {
-        var xRetorno = _pessoaApplicationService.Adicionar(pPessoa);
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+            var xRetorno = _pessoaApplicationService.Adicionar(pPessoa);
+
         
         return xRetorno;
     }

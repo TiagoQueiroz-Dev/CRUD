@@ -4,14 +4,14 @@
     "C:\\Estudos\\Projeto\\BACK\\Infra\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj": {
+    "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj",
-        "projectName": "Aplication",
-        "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Tiago Queiroz\\.nuget\\packages\\",
-        "outputPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\obj\\",
+        "outputPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tiago Queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -160,8 +160,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj": {
-                "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Aplication\\Aplication.csproj"
+              "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj": {
+                "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Application\\Application.csproj"
               },
               "C:\\Estudos\\Projeto\\BACK\\Core\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Estudos\\Projeto\\BACK\\Core\\Domain\\Domain.csproj"
