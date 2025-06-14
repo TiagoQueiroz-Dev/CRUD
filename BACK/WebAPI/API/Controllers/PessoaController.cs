@@ -22,15 +22,25 @@ public class PessoaController : ControllerBase
     }
     [Route("AdicionarPessoa")]
     [HttpPost]
-    public ActionResult<int> AdicionarPessoa([FromBody] AdicionarPessoaViewModel pPessoa)
+    public ActionResult<int> AdicionarPessoa(AdicionarPessoaViewModel pPessoa)
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            try
+            {
+                var xRetorno = _pessoaApplicationService.Adicionar(pPessoa);
 
-            var xRetorno = _pessoaApplicationService.Adicionar(pPessoa);
-
-        
-        return xRetorno;
+                return xRetorno;
+            }
+            catch (Exception e)
+            {
+                return ValidationProblem(
+                    detail: e.Message
+                    , statusCode: StatusCodes.Status401Unauthorized
+                    , title: nameof(AdicionarPessoa)
+                    , modelStateDictionary: ModelState
+                );
+            }
     }
     
 }
