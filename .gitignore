@@ -1,10 +1,56 @@
-# Padrão de projetos Node/Angular
-/node_modules
-/dist
-
-# Ignorar todos os arquivos TypeScript (conforme seu pedido)
+# ----------------------
+# BACKEND (.NET - C#)
+# ----------------------
+BACK/bin/
+BACK/obj/
+BACK/**/bin/
+BACK/**/obj/
+BACK/.vs/
+BACK/.vscode/
+BACK/*.user
+BACK/*.suo
+BACK/*.userosscache
+BACK/*.sln.docstates
+BACK/TestResults/
+BACK/packages/
+BACK/*.ncrunch*
+BACK/*.localhistory/
+BACK/*.resharper/
+BACK/**/appsettings.Development.json
+BACK/**/appsettings.Local.json
+BACK/**/secrets.json
 appsettings.json
-# Arquivos de IDE e sistema
+
+# ----------------------
+# FRONTEND (Angular)
+# ----------------------
+FRONT/node_modules/
+FRONT/.angular/
+FRONT/.angular/cache/
+FRONT/dist/
+FRONT/tmp/
+FRONT/.vscode/
+FRONT/.env
+FRONT/.env.*
+
+# ----------------------
+# Sistema
+# ----------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------
+# Logs e backups
+# ----------------------
+*.log
+*.tsbuildinfo
+
+# ----------------------
+# Editor configs
+# ----------------------
+*.sublime-workspace
+*.sublime-project
+.idea/
 .vscode/
-/obj/
-/Debug/
+*.code-workspace
