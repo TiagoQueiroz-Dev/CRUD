@@ -19,12 +19,14 @@ BACK/*.resharper/
 BACK/**/appsettings.Development.json
 BACK/**/appsettings.Local.json
 BACK/**/secrets.json
-appsettings.json
-*.pem
 BACK/**/appsettings.Production.json
+appsettings.json
+appsettings.Production.json
+*.pem
 # ----------------------
 # FRONTEND (Angular)
 # ----------------------
+FRONT/src/environments/environment.prod.ts
 FRONT/node_modules/
 FRONT/.angular/
 FRONT/.angular/cache/
