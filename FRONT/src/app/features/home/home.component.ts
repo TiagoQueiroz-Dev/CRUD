@@ -12,6 +12,7 @@ import { PessoaService } from './home.service';
 import { AdicionarPessoaViewModel } from '../../../api';
 import { FormularioComponent } from "../../shared/components/formulario/formulario.component";
 import { campoFormulario } from '../../shared/data/campo_formulario';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +29,7 @@ import { campoFormulario } from '../../shared/data/campo_formulario';
     DatePickerModule,
     FormularioComponent
 ],
+providers: [MessageService],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
@@ -35,11 +37,13 @@ export class HomeComponent {
   constructor(
     private _pessoaService: PessoaService
     , private fb: FormBuilder
+    , private messageService: MessageService
   ){}
 
   formulario: FormGroup;
   Resultado: AdicionarPessoaViewModel;
   campos: campoFormulario[];
+  erro: string;
 
 
 
@@ -53,7 +57,7 @@ export class HomeComponent {
     this.Resultado = {
       Nome: this.formulario.value.nome,
       CPF: this.formulario.value.cpf,
-      DataNascimento: new Date(this.formulario.value.idade),
+      DataNascimento: new Date(this.formulario.value.idade).toISOString(),
       Genero: this.formulario.value.sexo.value
     }
   }
@@ -88,17 +92,37 @@ export class HomeComponent {
         tipo: 'select',
         label: 'Sexo',
         options: [
-          { nome: 'Masculino', value: true },
-          { nome: 'Feminino', value: false }
+          { nome: 'Masculino', value: 1 },
+          { nome: 'Feminino', value: 2 }
         ],
         validators: [Validators.required]
       }
     ];
   }
 
-  enviar() {
+  async enviar() {
     this.mapearFormulario();
-    this._pessoaService.AdicionarPessoa(this.Resultado);
+    try {
+      const retornoApi = await this._pessoaService.AdicionarPessoa(this.Resultado);
+
+        this.messageService.add(
+        {
+          severity: 'success'
+          , summary: 'Sucesso'
+          , detail: 'Pessoa Adicionada com sucesso! ID: ' + retornoApi
+          , life: 2000
+        });
+    } catch (error) {
+
+      const erro = error.error?.detail || error.message;
+      this.messageService.add(
+        {
+          severity: 'error'
+          , summary: 'Erro'
+          , detail: 'Não foi possivel Adicionar a pessoa: ' + erro
+          , life: 2000
+        });
+    }
   }
 
 }

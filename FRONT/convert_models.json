@@ -1,10 +1,11 @@
 {
   "include": [
       "C:/estudos/projeto/bACK/core/domain/Entities/*.cs",
-      "C:/estudos/projeto/bACK/core/aplication/viewModels/**/*.cs"
+      "C:/estudos/projeto/bACK/core/application/ViewModels/*/*.cs",
+      "C:/estudos/projeto/bACK/core/domain/Entities/EntidadeBase/*.cs"
   ],
   "exclude": [
-    "C:/estudos/projeto/bACK/core/aplication/viewModels/**/ProfileExtencion.cs"
+    "C:/estudos/projeto/bACK/core/application/ViewModels/**/ProfileExtencion.cs"
   ],
   "output": "./src/api.ts",
   "includeComments": true,
@@ -23,6 +24,6 @@
   "customTypeTranslations": {
       "ProductName": "string",
       "ProductNumber": "string",
-      "DateTime": "Date"
+      "DateTime": "string"
   }
 }

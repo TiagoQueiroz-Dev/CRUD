@@ -6,6 +6,6 @@ export class campoFormulario {
   maxLength?: number;
   validators: any[];
   placeholder?: string;
-  options?: { nome: string, value: boolean }[];
+  options?: { nome: string, value: number }[];
   required?: boolean;
 }

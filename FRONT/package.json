@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "prestart": "csharp-models-to-typescript --config=convert_models.json",
-    "start": "ng serve",
+    "start": "ng serve --ssl true --ssl-cert src/app/features/auth/ssl/localhost.pem --ssl-key src/app/features/auth/ssl/localhost-key.pem",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "prod": "ng serve --ssl true --ssl-cert src/app/features/auth/ssl/localhost.pem --ssl-key src/app/features/auth/ssl/localhost-key.pem --configuration production"
   },
   "private": true,
   "dependencies": {

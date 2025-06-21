@@ -23,7 +23,7 @@ appsettings.json
 *.csproject
 *.pem
 *.user
-appsettings.Production.json
+BACK/**/appsettings.Production.json
 # ----------------------
 # FRONTEND (Angular)
 # ----------------------
