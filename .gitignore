@@ -20,7 +20,10 @@ BACK/**/appsettings.Development.json
 BACK/**/appsettings.Local.json
 BACK/**/secrets.json
 appsettings.json
-
+*.csproject
+*.pem
+*.user
+appsettings.Production.json
 # ----------------------
 # FRONTEND (Angular)
 # ----------------------
@@ -32,6 +35,7 @@ FRONT/tmp/
 FRONT/.vscode/
 FRONT/.env
 FRONT/.env.*
+*.config
 
 # ----------------------
 # Sistema
@@ -45,6 +49,7 @@ desktop.ini
 # ----------------------
 *.log
 *.tsbuildinfo
+logs
 
 # ----------------------
 # Editor configs
