@@ -20,9 +20,7 @@ BACK/**/appsettings.Development.json
 BACK/**/appsettings.Local.json
 BACK/**/secrets.json
 appsettings.json
-*.csproject
 *.pem
-*.user
 BACK/**/appsettings.Production.json
 # ----------------------
 # FRONTEND (Angular)

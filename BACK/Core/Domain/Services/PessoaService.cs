@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Domain.Entities;
 using Domain.Enums;
 using Domain.Repositories;
@@ -25,6 +26,11 @@ public class PessoaService : IPessoaService
 
         if (string.IsNullOrWhiteSpace(pPessoa.CPF))
             throw new Exception("CPF é obrigatorio");
+
+        pPessoa.CPF = Regex.Replace(pPessoa.CPF, @"[^0-9]", "");
+
+        if (pPessoa.CPF.Length != 11)
+            throw new Exception("CPF deve ter 11 caracteres");
 
         if (pPessoa.Genero != (int)EGenero.Masculino && pPessoa.Genero != (int)EGenero.Feminino)
             throw new Exception("Genero é obrigatorio");

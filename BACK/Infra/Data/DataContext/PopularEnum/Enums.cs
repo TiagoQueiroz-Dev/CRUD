@@ -4,6 +4,8 @@ using System.Collections;
 using System.Linq;
 using Domain.Enums;
 using Domain.Interfaces;
+using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Data.DataContext.PopularEnum;
 
@@ -88,6 +90,8 @@ public static class Enums
                     .GetMethod("Remove")!
                     .Invoke(dbSet, new object[] { item.Original });
             }
+
+            Log.Information("Populando Enums");
 
             context.SaveChanges();
         }
